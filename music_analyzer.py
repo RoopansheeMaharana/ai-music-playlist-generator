@@ -2,8 +2,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import pandas as pd
 
-client_id = "b96e07ca10a64e8aa6e8d39c0e5d3088"
-client_secret = "430ada2fc1ed48d080a2852bd1561d08"
+client_id = "YOUR_CLIENT_ID"
+client_secret = "YOUR_CLIENT_SECRET"
 
 auth_manager = SpotifyClientCredentials(
     client_id=client_id,
@@ -34,4 +34,5 @@ df = pd.DataFrame(songs_data)
 df.to_csv("spotify_songs_dataset.csv", index=False)
 
 print("Dataset created successfully!")
+
 print(df)
